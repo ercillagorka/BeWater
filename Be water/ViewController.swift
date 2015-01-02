@@ -7,8 +7,44 @@
 //
 
 import UIKit
+import HealthKit
 
 class ViewController: UIViewController {
+    
+    let jeightQuantity = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)
+    let weightQuantity = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)
+    
+    lazy var healthStore = HKHealthStore()
+    lazy var typesToShare: NSSet = {
+        return NSSet(objects: self.jeightQuantity,
+        self.weightQuantity)
+    }()
+    lazy var typesToRead: NSSet = {
+        return NSSet(objects: self.jeightQuantity,
+            self.weightQuantity)
+        }()
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if HKHealthStore.isHealthDataAvailable(){
+            healthStore.requestAuthorizationToShareTypes(typesToShare, readTypes: typesToRead,
+                completion: {(succeeded: Bool, error: NSError!) in
+                
+                if succeeded && error == nil {
+                    println("Succesfully authorization")
+                } else {
+                    if let theError = error{
+                        println("Error occurred = \(theError)")
+                    }
+                }
+                
+            })
+        } else {
+            println("Health data is not available")
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +57,6 @@ class ViewController: UIViewController {
     }
 
 
+    
 }
 
