@@ -30,12 +30,14 @@
 		9F0961F01A570FFA007DDBB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F0961F11A570FFA007DDBB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F0961F31A570FFA007DDBB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9F0961F61A570FFA007DDBB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F0961F81A570FFA007DDBB5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9F0961FB1A570FFA007DDBB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9F0962011A570FFA007DDBB5 /* Be waterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Be waterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0962061A570FFA007DDBB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F0962071A570FFA007DDBB5 /* Be_waterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Be_waterTests.swift; sourceTree = "<group>"; };
+		9F0962121A571051007DDBB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9FB6C9221A5711460081E535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FB6C9231A57115E0081E535 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				TargetAttributes = {
 					9F0961EB1A570FFA007DDBB5 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = T355TDU55C;
 					};
 					9F0962001A570FFA007DDBB5 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -173,8 +176,8 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				es,
 			);
 			mainGroup = 9F0961E31A570FFA007DDBB5;
 			productRefGroup = 9F0961ED1A570FFA007DDBB5 /* Products */;
@@ -239,7 +242,8 @@
 		9F0961F51A570FFA007DDBB5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9F0961F61A570FFA007DDBB5 /* Base */,
+				9FB6C9221A5711460081E535 /* Base */,
+				9FB6C9231A57115E0081E535 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -248,6 +252,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9F0961FB1A570FFA007DDBB5 /* Base */,
+				9F0962121A571051007DDBB5 /* es */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -336,7 +341,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Be water/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -346,7 +353,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Be water/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -405,6 +414,7 @@
 				9F09620D1A570FFA007DDBB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F09620E1A570FFA007DDBB5 /* Build configuration list for PBXNativeTarget "Be waterTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +423,7 @@
 				9F0962101A570FFA007DDBB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
