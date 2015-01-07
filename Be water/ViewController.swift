@@ -3,10 +3,20 @@ import HealthKit
 
 class ViewController: UIViewController, UIPageViewControllerDataSource{
 
+    /** PageViewController **/
     private var myPageViewController: UIPageViewController?
-    
     private let contentImages = ["nature_pic_1.png",
+        "nature_pic_2.png",
+        "nature_pic_2.png",
         "nature_pic_2.png",]
+    
+    /** HealthKit**/
+    lazy var healthStore = HKHealthStore()
+    let weightQuantity = HKQuantityType.quantityTypeForIdentifier(
+        HKQuantityTypeIdentifierBodyMass)
+    lazy var typesToRead: NSSet = {
+        return NSSet(objects:self.weightQuantity)
+        }()
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -55,6 +65,9 @@ class ViewController: UIViewController, UIPageViewControllerDataSource{
         
         let itemController = viewController as PageItemController
         if itemController.itemIndex+1 < contentImages.count {
+            if(itemController.itemIndex == 1){
+                askPermissionToAccessHealthStore()
+            }
             return getItemController(itemController.itemIndex+1)
         }else{
             for view in self.view.subviews {
@@ -84,6 +97,32 @@ class ViewController: UIViewController, UIPageViewControllerDataSource{
         return 0
     }
     
+    func askPermissionToAccessHealthStore(){
+        if HKHealthStore.isHealthDataAvailable(){
+            healthStore.requestAuthorizationToShareTypes(nil,
+                readTypes: typesToRead,
+                completion: {(succeeded: Bool, error: NSError!) in
+                    
+                    if succeeded && error == nil{
+                        println("Successfully received authorization")
+                    } else {
+                        if let theError = error{
+                            println("Error occurred = \(theError)")
+                            if(theError.code == 7){
+                                let alert = UIAlertController(title: nil, message: "Sin esta informacion no se podra calcular el agua diaria", preferredStyle: UIAlertControllerStyle.Alert)
+                                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                                alert.addAction(UIAlertAction(title: "NO", style: UIAlertActionStyle.Cancel, handler: nil))
+                                self.presentViewController(alert, animated: true, completion: nil)
+                            }
+                        }
+                    }
+                    
+            })
+            
+        } else {
+            println("Health data is not available")
+        }
+    }
     
 }
 
