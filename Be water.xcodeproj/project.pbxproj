@@ -14,6 +14,7 @@
 		9F0961FC1A570FFA007DDBB5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0961FA1A570FFA007DDBB5 /* LaunchScreen.xib */; };
 		9F0962081A570FFA007DDBB5 /* Be_waterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0962071A570FFA007DDBB5 /* Be_waterTests.swift */; };
 		9FB6C9261A5715210081E535 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB6C9251A5715210081E535 /* HealthKit.framework */; };
+		9FC980561A5D4C6400A3443D /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC980551A5D4C6400A3443D /* PageItemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		9FB6C9231A57115E0081E535 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		9FB6C9241A5715200081E535 /* Be water.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Be water.entitlements"; sourceTree = "<group>"; };
 		9FB6C9251A5715210081E535 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		9FC980551A5D4C6400A3443D /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				9FB6C9241A5715200081E535 /* Be water.entitlements */,
 				9F0961F11A570FFA007DDBB5 /* AppDelegate.swift */,
 				9F0961F31A570FFA007DDBB5 /* ViewController.swift */,
+				9FC980551A5D4C6400A3443D /* PageItemController.swift */,
 				9F0961F51A570FFA007DDBB5 /* Main.storyboard */,
 				9F0961F81A570FFA007DDBB5 /* Images.xcassets */,
 				9F0961FA1A570FFA007DDBB5 /* LaunchScreen.xib */,
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FC980561A5D4C6400A3443D /* PageItemController.swift in Sources */,
 				9F0961F41A570FFA007DDBB5 /* ViewController.swift in Sources */,
 				9F0961F21A570FFA007DDBB5 /* AppDelegate.swift in Sources */,
 			);

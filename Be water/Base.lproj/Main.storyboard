@@ -15,32 +15,55 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ofm-qc-5MY">
-                                <rect key="frame" x="228" y="28" width="144" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwq-zF-V5o">
-                                <rect key="frame" x="231" y="66" width="139" height="49"/>
-                                <state key="normal" title="Guardar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveUserWeight" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ScB-Xo-PZW"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12954977149999999" green="0.44890511039999997" blue="0.15666483340000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <connections>
-                        <outlet property="saveButton" destination="Mwq-zF-V5o" id="ySw-BB-t0q"/>
-                        <outlet property="textField" destination="ofm-qc-5MY" id="b16-s8-dxX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="501" y="467"/>
+            <point key="canvasLocation" x="383" y="1105"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="R9P-xM-S5I">
+            <objects>
+                <pageViewController storyboardIdentifier="PageController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="qwZ-z0-zCk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bp3-hA-5Me" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="392"/>
+        </scene>
+        <!--Page Item Controller-->
+        <scene sceneID="z7b-s4-cgx">
+            <objects>
+                <viewController storyboardIdentifier="ItemController" id="mUl-16-cfW" customClass="PageItemController" customModule="Be_water" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PU9-EZ-xt3"/>
+                        <viewControllerLayoutGuide type="bottom" id="91u-Ch-zY2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9se-3q-9z5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1M3-QD-eoM">
+                                <rect key="frame" x="140" y="140" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="E8h-Pb-DSe"/>
+                                    <constraint firstAttribute="width" constant="320" id="c3C-se-pUU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89512310610000001" green="0.89512310610000001" blue="0.89512310610000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="1M3-QD-eoM" secondAttribute="centerX" id="2Um-sS-b2w"/>
+                            <constraint firstAttribute="centerY" secondItem="1M3-QD-eoM" secondAttribute="centerY" id="7BI-wd-OLz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentImageView" destination="1M3-QD-eoM" id="Q3I-OQ-ppD"/>
+                        <outlet property="view" destination="9se-3q-9z5" id="Vli-1G-EiG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3O-Rk-Jzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="392"/>
         </scene>
     </scenes>
 </document>

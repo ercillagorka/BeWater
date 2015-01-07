@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Be water
-//
-//  Created by Gorka Ercilla on 2/1/15.
-//  Copyright (c) 2015 gorka. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
