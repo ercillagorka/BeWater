@@ -90,12 +90,8 @@
 			children = (
 				9FB6C9241A5715200081E535 /* Be water.entitlements */,
 				9F0961F11A570FFA007DDBB5 /* AppDelegate.swift */,
-				9F0961F31A570FFA007DDBB5 /* ViewController.swift */,
-				9FC980551A5D4C6400A3443D /* PageItemController.swift */,
-				9F0961F51A570FFA007DDBB5 /* Main.storyboard */,
-				9F0961F81A570FFA007DDBB5 /* Images.xcassets */,
-				9FD2829D1A5DA5AF001F6735 /* Localization.strings */,
-				9F0961FA1A570FFA007DDBB5 /* LaunchScreen.xib */,
+				9FAB872E1A5E8D3100299557 /* Controllers */,
+				9FAB872D1A5E8D0A00299557 /* View */,
 				9F0961EF1A570FFA007DDBB5 /* Supporting Files */,
 			);
 			path = "Be water";
@@ -124,6 +120,26 @@
 				9F0962061A570FFA007DDBB5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FAB872D1A5E8D0A00299557 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F0961F51A570FFA007DDBB5 /* Main.storyboard */,
+				9F0961FA1A570FFA007DDBB5 /* LaunchScreen.xib */,
+				9FD2829D1A5DA5AF001F6735 /* Localization.strings */,
+				9F0961F81A570FFA007DDBB5 /* Images.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9FAB872E1A5E8D3100299557 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F0961F31A570FFA007DDBB5 /* ViewController.swift */,
+				9FC980551A5D4C6400A3443D /* PageItemController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

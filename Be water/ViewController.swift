@@ -116,8 +116,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource{
                             println("Error occurred = \(theError)")
                             if(theError.code == 7){
                                 let alert = UIAlertController(
-                                    title: nil,
-                                    message: "Sin esta informacion no se podra calcular el agua diaria",
+                                    title: NSLocalizedString("Sin esta informacion no se podra calcular el agua diaria", comment:""),
+                                    message: nil,
                                     preferredStyle: UIAlertControllerStyle.Alert)
                                 
                                 alert.addAction(UIAlertAction(
