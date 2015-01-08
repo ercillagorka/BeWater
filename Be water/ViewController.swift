@@ -33,7 +33,11 @@ class ViewController: UIViewController, UIPageViewControllerDataSource{
         if contentImages.count > 0 {
             let firstController = getItemController(0)!
             let startingViewControllers: NSArray = [firstController]
-            pageController.setViewControllers(startingViewControllers, direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
+            pageController.setViewControllers(
+                startingViewControllers,
+                direction: UIPageViewControllerNavigationDirection.Forward,
+                animated: false,
+                completion: nil)
         }
         
         myPageViewController = pageController
@@ -51,7 +55,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource{
     
     // MARK: - UIPageViewControllerDataSource
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(pageViewController: UIPageViewController,
+        viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
         let itemController = viewController as PageItemController
         if itemController.itemIndex > 0 {
@@ -61,7 +66,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource{
         return nil
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(pageViewController: UIPageViewController,
+        viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
         let itemController = viewController as PageItemController
         if itemController.itemIndex+1 < contentImages.count {
@@ -109,9 +115,21 @@ class ViewController: UIViewController, UIPageViewControllerDataSource{
                         if let theError = error{
                             println("Error occurred = \(theError)")
                             if(theError.code == 7){
-                                let alert = UIAlertController(title: nil, message: "Sin esta informacion no se podra calcular el agua diaria", preferredStyle: UIAlertControllerStyle.Alert)
-                                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                                alert.addAction(UIAlertAction(title: "NO", style: UIAlertActionStyle.Cancel, handler: nil))
+                                let alert = UIAlertController(
+                                    title: nil,
+                                    message: "Sin esta informacion no se podra calcular el agua diaria",
+                                    preferredStyle: UIAlertControllerStyle.Alert)
+                                
+                                alert.addAction(UIAlertAction(
+                                    title: "OK",
+                                    style: UIAlertActionStyle.Default,
+                                    handler: self.callPermission))
+                                
+                                alert.addAction(UIAlertAction(
+                                    title: "NO",
+                                    style: UIAlertActionStyle.Cancel,
+                                    handler: nil))
+                                
                                 self.presentViewController(alert, animated: true, completion: nil)
                             }
                         }
@@ -122,6 +140,10 @@ class ViewController: UIViewController, UIPageViewControllerDataSource{
         } else {
             println("Health data is not available")
         }
+    }
+    
+    func callPermission(act:UIAlertAction!){
+        askPermissionToAccessHealthStore()
     }
     
 }

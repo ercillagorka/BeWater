@@ -15,6 +15,7 @@
 		9F0962081A570FFA007DDBB5 /* Be_waterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0962071A570FFA007DDBB5 /* Be_waterTests.swift */; };
 		9FB6C9261A5715210081E535 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB6C9251A5715210081E535 /* HealthKit.framework */; };
 		9FC980561A5D4C6400A3443D /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC980551A5D4C6400A3443D /* PageItemController.swift */; };
+		9FD2829B1A5DA5AF001F6735 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD2829D1A5DA5AF001F6735 /* Localization.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		9FB6C9241A5715200081E535 /* Be water.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Be water.entitlements"; sourceTree = "<group>"; };
 		9FB6C9251A5715210081E535 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		9FC980551A5D4C6400A3443D /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
+		9FD2829C1A5DA5AF001F6735 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localization.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				9FC980551A5D4C6400A3443D /* PageItemController.swift */,
 				9F0961F51A570FFA007DDBB5 /* Main.storyboard */,
 				9F0961F81A570FFA007DDBB5 /* Images.xcassets */,
+				9FD2829D1A5DA5AF001F6735 /* Localization.strings */,
 				9F0961FA1A570FFA007DDBB5 /* LaunchScreen.xib */,
 				9F0961EF1A570FFA007DDBB5 /* Supporting Files */,
 			);
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F0961F71A570FFA007DDBB5 /* Main.storyboard in Resources */,
+				9FD2829B1A5DA5AF001F6735 /* Localization.strings in Resources */,
 				9F0961FC1A570FFA007DDBB5 /* LaunchScreen.xib in Resources */,
 				9F0961F91A570FFA007DDBB5 /* Images.xcassets in Resources */,
 			);
@@ -270,6 +274,15 @@
 				9F0962121A571051007DDBB5 /* es */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		9FD2829D1A5DA5AF001F6735 /* Localization.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FD2829C1A5DA5AF001F6735 /* es */,
+			);
+			name = Localization.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
